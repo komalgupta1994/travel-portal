@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flight-booking-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: flight-booking
+  template:
+    metadata:
+      labels:
+        component: flight-booking
+    spec:
+      containers:
+        - name: book-flight
+          image: kamligupta/flight-booking
+          ports:
+            - containerPort: 4002
+          env:
+            - name: PORT
+              value: "4002"

@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-service
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: 'true'
+spec:
+  rules:
+     - http:
+        paths:
+          - path: /user/
+            pathType: Prefix
+            backend:
+              service:
+                name: user-management-cluster-ip
+                port:
+                  number: 3010
+          - path: /hotel/
+            pathType: Prefix
+            backend:
+              service:
+                name: hotel-booking-cluster-ip
+                port:
+                  number: 3011
+          - path: /flight/
+            pathType: Prefix
+            backend:
+              service:
+                name: flight-booking-cluster-ip
+                port:
+                  number: 3012

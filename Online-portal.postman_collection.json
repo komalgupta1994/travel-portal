@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "b3acc19c-b635-411a-a3f5-d65816315dce",
+		"name": "Online-portal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27399873"
+	},
+	"item": [
+		{
+			"name": "Get Flight Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}flight/book",
+					"host": [
+						"{{baseUrl}}flight"
+					],
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Booking",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWxfaWQiOiJsYXZpdEBnbWFpbC5jb20iLCJuYW1lIjoiTGF2aXQiLCJpYXQiOjE2ODc1MDc5MzksImV4cCI6MTY4NzUxMTUzOX0.MTcoWtdgwnE-SEuY31uo7bVu2s2CvQbomR_-b_HvMdE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"room_id\": 1,\r\n    \"quantity\": 1,\r\n    \"check_in_date\": \"21-June-2023\",\r\n    \"check_out_date\": \"23-June-2023\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}hotel/book",
+					"host": [
+						"{{baseUrl}}hotel"
+					],
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hotel Payment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWxfaWQiOiJsYXZpdEBnbWFpbC5jb20iLCJuYW1lIjoiTGF2aXQiLCJpYXQiOjE2ODc1MDUwNzMsImV4cCI6MTY4NzUwODY3M30.tf1_v52RIYsfvTnS3QG7NOlxxxjNtCRWGu2XP_GpOPY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"booking_id\": 108\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}hotel/payment",
+					"host": [
+						"{{baseUrl}}hotel"
+					],
+					"path": [
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Lovelesh\",\r\n    \"password\": \"lovelesh@123\",\r\n    \"email_id\": \"lovelesh@gmail.com\",\r\n    \"mobile_no\": \"9878976789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}user/create",
+					"host": [
+						"{{baseUrl}}user"
+					],
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user signIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email_id\": \"lavit@gmail.com\",\r\n    \"password\": \"lavit@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}user/signIn",
+					"host": [
+						"{{baseUrl}}user"
+					],
+					"path": [
+						"signIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 6,\r\n    \"name\": \"Lovelesh Agrawal\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}user/update",
+					"host": [
+						"{{baseUrl}}user"
+					],
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User metrics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}user/metrics",
+					"host": [
+						"{{baseUrl}}user"
+					],
+					"path": [
+						"metrics"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

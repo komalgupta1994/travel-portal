@@ -1,0 +1,265 @@
+<mxfile host="app.diagrams.net" modified="2023-07-02T10:25:46.392Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="dyXuaYox3_bD2X-s2NSR" version="21.5.2" type="device">
+  <diagram name="Page-1" id="-cmg4CMWuWo0ySV27GrY">
+    <mxGraphModel dx="3508" dy="4230" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-48" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="140" y="-720" width="760" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-49" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;" parent="1" source="riqv-OtGTNdCtn2GlwIw-52" target="riqv-OtGTNdCtn2GlwIw-55" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="495" y="-550" />
+              <mxPoint x="715" y="-550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.442;entryY=0.002;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=1;" parent="1" source="riqv-OtGTNdCtn2GlwIw-52" target="riqv-OtGTNdCtn2GlwIw-54" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="495" y="-550" />
+              <mxPoint x="328" y="-550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-52" value="&lt;u&gt;&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Online Travel Portal&lt;/font&gt;&lt;/b&gt;&lt;/u&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="-690" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-53" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;" parent="1" source="riqv-OtGTNdCtn2GlwIw-54" target="riqv-OtGTNdCtn2GlwIw-59" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="335" y="-410" />
+              <mxPoint x="335" y="-410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;" parent="1" source="riqv-OtGTNdCtn2GlwIw-54" target="riqv-OtGTNdCtn2GlwIw-58" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="335" y="-420" />
+              <mxPoint x="215" y="-420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;" parent="1" source="riqv-OtGTNdCtn2GlwIw-54" target="riqv-OtGTNdCtn2GlwIw-60" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="335" y="-420" />
+              <mxPoint x="440" y="-420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-54" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Flight Booking&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="275" y="-510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;" parent="1" source="riqv-OtGTNdCtn2GlwIw-55" target="riqv-OtGTNdCtn2GlwIw-61" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-69" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;" parent="1" source="riqv-OtGTNdCtn2GlwIw-55" target="riqv-OtGTNdCtn2GlwIw-62" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;" parent="1" source="riqv-OtGTNdCtn2GlwIw-55" target="riqv-OtGTNdCtn2GlwIw-63" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="715" y="-420" />
+              <mxPoint x="825" y="-420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-55" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Hotel Booking&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="655" y="-500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-57" value="&lt;h2&gt;Decomposition by Business Capacities&lt;/h2&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="505" y="-640" width="245" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-58" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Onboarding&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="165" y="-400" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-59" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Search&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="285" y="-400" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-60" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;reservation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="395" y="-400" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-61" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Onboarding&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="575" y="-400" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-62" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Search&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="685" y="-400" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-63" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Reservation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="785" y="-400" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-71" value="&lt;h2&gt;Decomposition by sub domain&lt;/h2&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="440" y="-500" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OHlBqg5kiXR_KKKpQUeQ-1" value="&lt;h1&gt;&lt;font style=&quot;font-size: 36px;&quot;&gt;Online Travel Portal Architecture&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="860" y="-2300" width="850" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="465" y="-1930" width="1705" height="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.015;entryY=0.67;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=4;" edge="1" parent="1" source="SSbZfa05LaCUc5v5V023-5" target="SSbZfa05LaCUc5v5V023-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="-1420" />
+              <mxPoint x="620" y="-1590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=4;" edge="1" parent="1" source="SSbZfa05LaCUc5v5V023-5" target="SSbZfa05LaCUc5v5V023-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="-1350" />
+              <mxPoint x="890" y="-1350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.019;entryY=0.667;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=4;" edge="1" parent="1" source="SSbZfa05LaCUc5v5V023-5" target="SSbZfa05LaCUc5v5V023-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="630" y="-1290" />
+              <mxPoint x="630" y="-1070" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-5" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;API Gateway /Ingress Service&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="390" y="-1470" width="150" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="SSbZfa05LaCUc5v5V023-6" target="SSbZfa05LaCUc5v5V023-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-57" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Hotel Booking DB&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="SSbZfa05LaCUc5v5V023-56">
+          <mxGeometry x="0.0447" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.457;entryY=0.002;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="SSbZfa05LaCUc5v5V023-6" target="SSbZfa05LaCUc5v5V023-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1980" y="-1680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-63" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Used Kafka to update the&lt;br&gt; &lt;/font&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;search result if any hotel booking&lt;br&gt; &lt;/font&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;is in progress&lt;/font&gt;&lt;/h2&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="SSbZfa05LaCUc5v5V023-61">
+          <mxGeometry x="0.1026" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=3;" edge="1" parent="1" source="SSbZfa05LaCUc5v5V023-6" target="SSbZfa05LaCUc5v5V023-69">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="-1840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-71" value="&lt;h3&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Used to store booking key&lt;br&gt; &lt;/font&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;for specific time until payment&lt;br&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&amp;nbsp;is successful or remove entry from&lt;br&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;DB when key expire&lt;/font&gt;&lt;/h3&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="SSbZfa05LaCUc5v5V023-70">
+          <mxGeometry x="-0.0908" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-6" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Hotel Booking SVC&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="715" y="-1690" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="SSbZfa05LaCUc5v5V023-7" target="SSbZfa05LaCUc5v5V023-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-58" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Flight Booking DB&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="SSbZfa05LaCUc5v5V023-55">
+          <mxGeometry x="-0.0853" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="SSbZfa05LaCUc5v5V023-7" target="SSbZfa05LaCUc5v5V023-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2045" y="-1050" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-68" value="&lt;h2 style=&quot;border-color: var(--border-color);&quot;&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 18px;&quot;&gt;Used Kafka to update the&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/font&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 18px;&quot;&gt;search result if any flight booking&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/font&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 18px;&quot;&gt;is in progress&lt;/font&gt;&lt;/h2&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="SSbZfa05LaCUc5v5V023-62">
+          <mxGeometry x="0.2264" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-7" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Flight Booking SVC&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="735" y="-1170" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="SSbZfa05LaCUc5v5V023-8" target="SSbZfa05LaCUc5v5V023-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1360" y="-1365" />
+              <mxPoint x="1360" y="-1365" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-59" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;User &lt;br&gt;Management &lt;br&gt;DB&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="SSbZfa05LaCUc5v5V023-53">
+          <mxGeometry x="0.0752" y="6" relative="1" as="geometry">
+            <mxPoint x="-6" y="6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-8" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;User Management SVC&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="960" y="-1440" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-9" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="-1495" width="380" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-11" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;MySql DB Master&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="-1405" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-12" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;MySql DB Slave&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="1590" y="-1405" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-14" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1880" y="-1590" width="220" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-15" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#945DF2;gradientDirection=north;fillColor=#5A30B5;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.managed_streaming_for_kafka;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="-1540" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-16" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Kafka&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1930" y="-1310" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-36" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;Traffic&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="100" y="-1417.5" width="127.5" height="127.5" as="geometry" />
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-37" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.007;entryY=0.459;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=7;" edge="1" parent="1" target="SSbZfa05LaCUc5v5V023-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="-1360" as="sourcePoint" />
+            <mxPoint x="275" y="-1405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-47" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="SSbZfa05LaCUc5v5V023-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="980" y="-1570" as="sourcePoint" />
+            <mxPoint x="1030" y="-1620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-48" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Authentication&lt;br&gt;using JWT&lt;br&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="SSbZfa05LaCUc5v5V023-47">
+          <mxGeometry x="-0.0028" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-49" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.381;entryY=1.004;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="SSbZfa05LaCUc5v5V023-7" target="SSbZfa05LaCUc5v5V023-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1030" y="-1240" as="sourcePoint" />
+            <mxPoint x="1125" y="-1110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-50" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Authentication&lt;br&gt;using JWT&lt;br&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="SSbZfa05LaCUc5v5V023-49">
+          <mxGeometry x="-0.0028" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-69" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Redis&amp;nbsp;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="1226" y="-1900" width="170" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="riqv-OtGTNdCtn2GlwIw-1" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;thread divide at service level and DB level means booking flight svc can use 30 threads or booking hotel can use 25 threads&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="90" y="-150" width="520" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="SSbZfa05LaCUc5v5V023-84" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;1. Here we have used containerized approach to create each service using Nest JS framework. so if we want to scale individual&amp;nbsp;service, we can do so.&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;2. To implement DB per service design pattern we have 2 approaches for RDBMS&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 24px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;a. Private-tables-per-service: each service owns a set of tables that &lt;/span&gt;&lt;span style=&quot;font-size: 24px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 24px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;must only be accessed by that service&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 24px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;b. Schema-per-service: each service has a database schema that&#39;s &lt;/span&gt;&lt;span style=&quot;font-size: 24px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 24px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;private to that service&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;3. For prod deployment we used kubernetes. Where we created deployments, cluster IP for each micro-service.&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;4. Ingress service is used as a api gateway and communicate with cluster IP of each micro-service.&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;5. For monitoring we can also use promethuses and grafana&lt;br&gt;&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1231" y="-460" width="799" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

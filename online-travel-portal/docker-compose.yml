@@ -1,0 +1,52 @@
+version: '3'
+services:
+  nginx:
+    restart: always
+    build:
+      context: ./nginx
+    ports:
+      - '4000:80'
+  redis:
+    image: 'redis:latest'
+    ports:
+      - 6379:6379
+  book-hotel:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./hotel-booking
+    volumes:
+      - /app/node_modules
+      - ./hotel-booking:/app
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - PORT=3000
+      - MYSQL_HOST=35.200.192.104
+      - MYSQL_PORT=3306
+      - MYSQL_USERNAME=root
+      - MYSQL_PASSWORD=Komal@123
+      - HOTEL_DB=hotel_management
+      - USER_DB=user_management
+      - JWT_SECRET_KEY='SECRET KEY'
+  book-flight:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./flight-booking
+    volumes:
+      - /app/node_modules
+      - ./flight-booking:/app
+  user:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./user-management
+    volumes:
+      - /app/node_modules
+      - ./user-management:/app
+    environment:
+      - PORT=3000
+      - MYSQL_HOST=35.200.192.104
+      - MYSQL_PORT=3306
+      - MYSQL_USERNAME=root
+      - MYSQL_PASSWORD=Komal@123
+      - USER_DB=user_management
+      - JWT_SECRET_KEY='SECRET KEY'

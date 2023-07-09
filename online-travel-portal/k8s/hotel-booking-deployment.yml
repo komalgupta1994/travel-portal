@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hotel-booking-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: hotel-booking
+  template:
+    metadata:
+      labels:
+        component: hotel-booking
+    spec:
+      containers:
+        - name: book-hotel
+          image: kamligupta/hotel-booking
+          ports:
+            - containerPort: 4001
+          env:
+            - name: PORT
+              value: "4001"
+            - name: REDIS_HOST
+              value: redis-cluster-ip
+            - name: REDIS_PORT
+              value: "6379"
+            - name: MYSQL_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config-map
+                  key: MYSQL_HOST
+            - name: MYSQL_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config-map
+                  key: MYSQL_PORT
+            - name: MYSQL_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config-map
+                  key: MYSQL_USERNAME
+            - name: USER_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config-map
+                  key: USER_DB
+            - name: HOTEL_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config-map
+                  key: HOTEL_DB
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-password-secret
+                  key: MYSQL_PASSWORD
+            - name: JWT_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret-key
+                  key: JWT_SECRET_KEY

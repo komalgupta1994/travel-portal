@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-management-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: user-management
+  template:
+    metadata:
+      labels:
+        component: user-management
+    spec:
+      containers:
+        - name: user
+          image: kamligupta/user-management
+          ports:
+            - containerPort: 4000 # Container port which inside the POD, it should be bind to service target port
+          env:
+            - name: PORT # the key which we used inside our image or app
+              value: "4000" # port value on which our user app will run it should be same as containerPort
+            - name: MYSQL_HOST # name of the env key which our code/app is using like process.env.MYSQL_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config-map # name of the config map file
+                  key: MYSQL_HOST # name of the key which is define inside the config file and it could be anything. It's doesn't require to same as the name
+            - name: MYSQL_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config-map
+                  key: MYSQL_PORT
+            - name: MYSQL_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config-map
+                  key: MYSQL_USERNAME
+            - name: USER_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config-map
+                  key: USER_DB
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-password-secret
+                  key: MYSQL_PASSWORD
+            - name: JWT_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret-key
+                  key: JWT_SECRET_KEY
