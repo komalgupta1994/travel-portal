@@ -99,6 +99,9 @@ jobs:
     - name: Deploy
       working-directory: online-travel-portal/k8s
       run: |-
+        helm list
+        helm delete my-release
+        helm install my-release ingress-nginx/ingress-nginx
         # Apply all yaml files
         kubectl apply -f .
         # replacing the image name in the k8s template
