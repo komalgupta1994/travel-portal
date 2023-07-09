@@ -8,12 +8,8 @@ on:
 
 env:
     # PROJECT_ID: ${{ secrets.GKE_PROJECT }} # apt-diode-386016
-    # GAR_LOCATION: us-central1 # TODO: update region of the Artifact Registry
     GKE_CLUSTER: autopilot-cluster-1    # TODO: update to cluster name
     GKE_REGION: asia-south2   # TODO: update to cluster zone
-    # DEPLOYMENT_NAME: node-app-deployment # TODO: update to deployment name
-    # CONTAINER_NAME: node-app-container # TODO: update to deployment name
-    # REPOSITORY: node-repo # TODO: update to Artifact Registry docker repository
     USER_MANAGEMENT_IMAGE: kamligupta/user-management
     HOTEL_BOOKING_IMAGE: kamligupta/hotel-booking
     FLIGHT_BOOKING_IMAGE: kamligupta/flight-booking
@@ -106,5 +102,3 @@ jobs:
         kubectl delete -A ValidatingWebhookConfiguration my-release-ingress-nginx-admission
         # Apply all yaml files
         kubectl apply -f .
-        # replacing the image name in the k8s template
-        # kubectl set image deployment/$DEPLOYMENT_NAME $CONTAINER_NAME=$IMAGE:latest
