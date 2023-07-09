@@ -31,36 +31,36 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Get Git Commit Hash
-      id: git_commit_hash
-      run: echo "hash=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+#     - name: Get Git Commit Hash
+#       id: git_commit_hash
+#       run: echo "hash=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
     
-    - name: Login to DockerHub
-      uses: docker/login-action@v1
-      with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+#     - name: Login to DockerHub
+#       uses: docker/login-action@v1
+#       with:
+#         username: ${{ secrets.DOCKER_USERNAME }}
+#         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Build user management docker image
-      run: docker build ./online-travel-portal/user-management --file ./online-travel-portal/user-management/Dockerfile --tag $USER_MANAGEMENT_IMAGE:${{ steps.git_commit_hash.outputs.hash }} --tag $USER_MANAGEMENT_IMAGE:latest
-    - name: Push to docker hub
-      run: |-
-        docker push $USER_MANAGEMENT_IMAGE:${{ steps.git_commit_hash.outputs.hash }}
-        docker push $USER_MANAGEMENT_IMAGE:latest
+#     - name: Build user management docker image
+#       run: docker build ./online-travel-portal/user-management --file ./online-travel-portal/user-management/Dockerfile --tag $USER_MANAGEMENT_IMAGE:${{ steps.git_commit_hash.outputs.hash }} --tag $USER_MANAGEMENT_IMAGE:latest
+#     - name: Push to docker hub
+#       run: |-
+#         docker push $USER_MANAGEMENT_IMAGE:${{ steps.git_commit_hash.outputs.hash }}
+#         docker push $USER_MANAGEMENT_IMAGE:latest
 
-    - name: Build hotel booking docker image
-      run: docker build ./online-travel-portal/hotel-booking --file ./online-travel-portal/hotel-booking/Dockerfile --tag $HOTEL_BOOKING_IMAGE:${{ steps.git_commit_hash.outputs.hash }} --tag $HOTEL_BOOKING_IMAGE:latest
-    - name: Push to docker hub
-      run: |-
-        docker push $HOTEL_BOOKING_IMAGE:${{ steps.git_commit_hash.outputs.hash }}
-        docker push $HOTEL_BOOKING_IMAGE:latest
+#     - name: Build hotel booking docker image
+#       run: docker build ./online-travel-portal/hotel-booking --file ./online-travel-portal/hotel-booking/Dockerfile --tag $HOTEL_BOOKING_IMAGE:${{ steps.git_commit_hash.outputs.hash }} --tag $HOTEL_BOOKING_IMAGE:latest
+#     - name: Push to docker hub
+#       run: |-
+#         docker push $HOTEL_BOOKING_IMAGE:${{ steps.git_commit_hash.outputs.hash }}
+#         docker push $HOTEL_BOOKING_IMAGE:latest
 
-    - name: Build flight booking docker image
-      run: docker build ./online-travel-portal/flight-booking --file ./online-travel-portal/flight-booking/Dockerfile --tag $FLIGHT_BOOKING_IMAGE:${{ steps.git_commit_hash.outputs.hash }} --tag $FLIGHT_BOOKING_IMAGE:latest
-    - name: Push to docker hub
-      run: |-
-        docker push $FLIGHT_BOOKING_IMAGE:${{ steps.git_commit_hash.outputs.hash }}
-        docker push $FLIGHT_BOOKING_IMAGE:latest
+#     - name: Build flight booking docker image
+#       run: docker build ./online-travel-portal/flight-booking --file ./online-travel-portal/flight-booking/Dockerfile --tag $FLIGHT_BOOKING_IMAGE:${{ steps.git_commit_hash.outputs.hash }} --tag $FLIGHT_BOOKING_IMAGE:latest
+#     - name: Push to docker hub
+#       run: |-
+#         docker push $FLIGHT_BOOKING_IMAGE:${{ steps.git_commit_hash.outputs.hash }}
+#         docker push $FLIGHT_BOOKING_IMAGE:latest
 
   setup-build-publish-deploy:
     name: Setup, Build, Publish, and Deploy
@@ -101,6 +101,7 @@ jobs:
       run: |-
         helm list
         helm delete my-release
+        helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
         helm install my-release ingress-nginx/ingress-nginx
         # Apply all yaml files
         kubectl apply -f .
