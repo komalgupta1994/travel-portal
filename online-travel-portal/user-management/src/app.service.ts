@@ -10,10 +10,11 @@ import { Counter } from 'prom-client';
 
 @Injectable()
 export class AppService {
-
-  constructor(@InjectRepository(User) private readonly userRepository: Repository<User>, 
-  private jwtService: JwtService,
-  @InjectMetric("user_metric") public counter: Counter<string>) { }
+  constructor(
+    @InjectRepository(User) private readonly userRepository: Repository<User>,
+    private jwtService: JwtService,
+    @InjectMetric('user_metric') public counter: Counter<string>,
+  ) {}
 
   async createUser(userDto: UserDto) {
     userDto.password = await this.encryptPassword(userDto.password);
@@ -26,7 +27,7 @@ export class AppService {
       userDto.password = await this.encryptPassword(userDto.password);
     }
     await this.userRepository.update(userDto.id, {
-      ...userDto
+      ...userDto,
     });
     return 'Update user info successfully';
   }
@@ -36,13 +37,16 @@ export class AppService {
     return user;
   }
 
+  async getUsers() {
+    return await this.userRepository.find();
+  }
+
   async encryptPassword(password) {
     const saltOrRounds = await bcrypt.genSalt();
     return await bcrypt.hash(password, saltOrRounds);
   }
 
   async signIn(emailId: string, password: string) {
-    console.log('counter--', this.counter)
     try {
       const user = await this.findUser(emailId);
       const isMatch = await bcrypt.compare(password, user?.password);
@@ -51,10 +55,9 @@ export class AppService {
       }
       const payload = { id: user.id, email_id: user.email_id, name: user.name };
       return {
-        access_token: await this.jwtService.signAsync(payload)
-      }
-    }
-    catch {
+        access_token: await this.jwtService.signAsync(payload),
+      };
+    } catch {
       throw new UnauthorizedException('Incorrect email id or password');
     }
   }

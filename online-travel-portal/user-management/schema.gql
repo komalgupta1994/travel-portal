@@ -1,0 +1,41 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  id: Float!
+  name: String!
+  mobile_no: String!
+  email_id: String!
+  password: String!
+}
+
+type AuthResponse {
+  access_token: String!
+}
+
+type Query {
+  getUsers: [User!]!
+  gerUserById(email_id: String!): User!
+  userSignIn(email_id: String!, password: String!): AuthResponse!
+}
+
+type Mutation {
+  createUser(input: CreateUserInput!): String!
+  updateUser(input: UpdateUserInput!): String!
+}
+
+input CreateUserInput {
+  name: String!
+  mobile_no: String!
+  email_id: String!
+  password: String!
+}
+
+input UpdateUserInput {
+  id: Float!
+  name: String
+  mobile_no: String
+  email_id: String
+  password: String
+}

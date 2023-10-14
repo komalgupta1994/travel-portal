@@ -1,20 +1,72 @@
-// import { Booking } from 'src/booking/entities/booking.entity';
-import { Entity, Column, PrimaryGeneratedColumn, OneToOne } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { ObjectType, Field, InputType } from '@nestjs/graphql';
 
-@Entity({name: 'users'})
+@ObjectType()
+@Entity({ name: 'users' })
 export class User {
-    @PrimaryGeneratedColumn()
-    id:number;
+  @Field()
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column({ nullable: false })
-    name: string;
+  @Field()
+  @Column({ nullable: false })
+  name: string;
 
-    @Column({ nullable: false })
-    mobile_no: string;
-    
-    @Column()
-    email_id: string;
+  @Field()
+  @Column({ nullable: false })
+  mobile_no: string;
 
-    @Column()
-    password: string;
+  @Field()
+  @Column()
+  email_id: string;
+
+  @Field()
+  @Column()
+  password: string;
+}
+
+@ObjectType()
+export class AuthResponse {
+  @Field()
+  access_token: string;
+}
+
+@ObjectType()
+export class CreateUpdateResponse {
+  @Field()
+  message: string;
+}
+
+@InputType()
+export class CreateUserInput {
+  @Field()
+  name: string;
+
+  @Field()
+  mobile_no: string;
+
+  @Field()
+  email_id: string;
+
+  @Field()
+  password: string;
+}
+
+@InputType()
+export class UpdateUserInput {
+  @Field()
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Field({ nullable: true })
+  name: string;
+
+  @Field({ nullable: true })
+  mobile_no: string;
+
+  @Field({ nullable: true })
+  email_id: string;
+
+  @Field({ nullable: true })
+  password: string;
 }

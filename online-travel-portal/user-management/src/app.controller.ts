@@ -17,8 +17,7 @@ export class AppController {
   }
 
   @Post('/signIn')
-    async signIn(@Body() user: UserDto) {
-        return await this.appService.signIn(user.email_id, user.password);
-    }
-
+  async signIn(@Body() user: UserDto) {
+    return await this.appService.signIn(user.email_id, user.password);
+  }
 }
