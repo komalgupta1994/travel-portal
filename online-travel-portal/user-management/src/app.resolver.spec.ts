@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { AppController } from './app.controller';
+import { UserResolver } from './app.resolver';
 import { AppService } from './app.service';
 
 // Mock implementations
@@ -38,12 +38,12 @@ class CounterMock {
 }
 
 describe('UserResolver', () => {
-  let appController: AppController;
+  let userResolver: UserResolver;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      controllers: [AppController],
       providers: [
+        UserResolver,
         {
           provide: AppService,
           useClass: AppServiceMock, // Use the mock implementation
@@ -59,22 +59,30 @@ describe('UserResolver', () => {
       ],
     }).compile();
 
-    appController = module.get<AppController>(AppController);
+    userResolver = module.get<UserResolver>(UserResolver);
   });
 
   it('should be defined', () => {
-    expect(appController).toBeDefined();
+    expect(userResolver).toBeDefined();
+  });
+
+  it('getUsers should return an array of users', async () => {
+    const users = await userResolver.getUsers();
+    expect(users).toHaveLength(1); // Check the expected number of users
+    expect(users[0].name).toEqual('User 1'); // Check user data
+  });
+
+  it('getUserById should return a user by email_id', async () => {
+    const user = await userResolver.gerUserById('user1@example.com');
+    expect(user).toBeDefined();
+    expect(user.name).toEqual('Test User');
   });
 
   it('userSignIn should return an authentication response', async () => {
-    const userDto = {
-      email_id: 'komall@gmail.com',
-      mobile_no: '9878976789',
-      id: 1,
-      name: 'komal',
-      password: 'komal',
-    };
-    const authResponse = await appController.signIn(userDto);
+    const authResponse = await userResolver.userSignIn(
+      'user1@example.com',
+      'password123',
+    );
     expect(authResponse.access_token).toEqual('mockAccessToken');
   });
 
@@ -87,7 +95,7 @@ describe('UserResolver', () => {
       password: 'komal',
     };
 
-    const result = await appController.createUser(userDto);
+    const result = await userResolver.createUser(userDto);
     expect(result).toEqual('User created successfully');
   });
 
@@ -100,7 +108,7 @@ describe('UserResolver', () => {
       password: 'komal',
     };
 
-    const result = await appController.updateUser(userDto);
+    const result = await userResolver.updateUser(userDto);
     expect(result).toEqual('Update user info successfully');
   });
 });
