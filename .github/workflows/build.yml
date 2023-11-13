@@ -22,6 +22,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Navigate to User Management directory
+        run: cd online-travel-portal/user-management
+
       - name: Install Dependencies
         run: npm install
 
