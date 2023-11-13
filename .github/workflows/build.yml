@@ -21,6 +21,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      
+      - name: Install Dependencies
+        run: npm install
 
       - name: Run User Management Tests
         run: |
