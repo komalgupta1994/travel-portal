@@ -69,7 +69,7 @@ describe('UserResolver', () => {
   it('getUsers should return an array of users', async () => {
     const users = await userResolver.getUsers();
     expect(users).toHaveLength(1); // Check the expected number of users
-    expect(users[0].name).toEqual('User'); // Check user data
+    expect(users[0].name).toEqual('User 1'); // Check user data
   });
 
   it('getUserById should return a user by email_id', async () => {
