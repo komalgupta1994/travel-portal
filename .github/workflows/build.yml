@@ -22,16 +22,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Navigate to User Management directory
-        run: cd online-travel-portal/user-management
-      
       - name: Install Dependencies
         run: npm install
 
       - name: Run User Management Tests
         run: |
           npm run test
-          exit 1
+          exit_code=$?
+
+          # Display a message based on the exit code
+          if [ $exit_code -eq 0 ]; then
+            echo "Tests passed successfully."
+          else
+            echo "Tests failed."
+            exit $exit_code
+          fi
 
   docker-image-push_job:
     needs: run-tests
