@@ -15,7 +15,20 @@ env:
     FLIGHT_BOOKING_IMAGE: kamligupta/flight-booking
 
 jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Run User Management Tests
+        run: |
+          npm run test
+          exit 1
+
   docker-image-push_job:
+    needs: run-tests
     runs-on: ubuntu-latest
 
     # Map a step output to a job output
