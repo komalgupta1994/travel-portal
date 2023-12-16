@@ -3,9 +3,9 @@ kind: ConfigMap
 metadata:
   name: db-config-map
 data:
-  MYSQL_HOST: "35.200.192.104"
+  MYSQL_HOST: "34.100.153.169"
   MYSQL_PORT: "3306"
-  MYSQL_USERNAME: "root"
+  MYSQL_USERNAME: "komal"
   HOTEL_DB: "hotel_management"
   USER_DB: "user_management"
 # command to create secret on and we need to setup manually on every env where we want to run out code like local, prod etc

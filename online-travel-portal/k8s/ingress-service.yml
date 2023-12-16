@@ -9,7 +9,7 @@ spec:
   rules:
      - http:
         paths:
-          - path: /user/
+          - path: /user/graphql/
             pathType: Prefix
             backend:
               service:
