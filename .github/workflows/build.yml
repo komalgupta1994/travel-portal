@@ -125,4 +125,4 @@ jobs:
         # kubectl delete -A ValidatingWebhookConfiguration my-release-ingress-nginx-admission
         # Apply all yaml files
         kubectl apply -f .
-        kubectl set image flight-booking-deployment book-flight=$FLIGHT_BOOKING_IMAGE:${{ needs.docker-image-push_job.outputs.hash }}
+        kubectl set image deployment/flight-booking-deployment book-flight=$FLIGHT_BOOKING_IMAGE:${{ needs.docker-image-push_job.outputs.hash }}
