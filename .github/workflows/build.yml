@@ -13,7 +13,6 @@ env:
     USER_MANAGEMENT_IMAGE: kamligupta/user-management
     HOTEL_BOOKING_IMAGE: kamligupta/hotel-booking
     FLIGHT_BOOKING_IMAGE: kamligupta/flight-booking
-    SHA: ${git rev-parse HEAD}
 
 jobs:
   run-tests:
@@ -62,24 +61,24 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build user management docker image
-      run: docker build ./online-travel-portal/user-management --file ./online-travel-portal/user-management/Dockerfile --tag $USER_MANAGEMENT_IMAGE:${{ env.SHA }} --tag $USER_MANAGEMENT_IMAGE:latest
+      run: docker build ./online-travel-portal/user-management --file ./online-travel-portal/user-management/Dockerfile --tag $USER_MANAGEMENT_IMAGE:${{ steps.git_commit_hash.outputs.hash }} --tag $USER_MANAGEMENT_IMAGE:latest
     - name: Push to docker hub
       run: |-
-        docker push $USER_MANAGEMENT_IMAGE:${{ env.SHA }}
+        docker push $USER_MANAGEMENT_IMAGE:${{ steps.git_commit_hash.outputs.hash }}
         docker push $USER_MANAGEMENT_IMAGE:latest
 
     - name: Build hotel booking docker image
-      run: docker build ./online-travel-portal/hotel-booking --file ./online-travel-portal/hotel-booking/Dockerfile --tag $HOTEL_BOOKING_IMAGE:${{ env.SHA }} --tag $HOTEL_BOOKING_IMAGE:latest
+      run: docker build ./online-travel-portal/hotel-booking --file ./online-travel-portal/hotel-booking/Dockerfile --tag $HOTEL_BOOKING_IMAGE:${{ steps.git_commit_hash.outputs.hash }} --tag $HOTEL_BOOKING_IMAGE:latest
     - name: Push to docker hub
       run: |-
-        docker push $HOTEL_BOOKING_IMAGE:${{ env.SHA }}
+        docker push $HOTEL_BOOKING_IMAGE:${{ steps.git_commit_hash.outputs.hash }}
         docker push $HOTEL_BOOKING_IMAGE:latest
 
     - name: Build flight booking docker image
-      run: docker build ./online-travel-portal/flight-booking --file ./online-travel-portal/flight-booking/Dockerfile --tag $FLIGHT_BOOKING_IMAGE:${{ env.SHA }} --tag $FLIGHT_BOOKING_IMAGE:latest
+      run: docker build ./online-travel-portal/flight-booking --file ./online-travel-portal/flight-booking/Dockerfile --tag $FLIGHT_BOOKING_IMAGE:${{ steps.git_commit_hash.outputs.hash }} --tag $FLIGHT_BOOKING_IMAGE:latest
     - name: Push to docker hub
       run: |-
-        docker push $FLIGHT_BOOKING_IMAGE:${{ env.SHA }}
+        docker push $FLIGHT_BOOKING_IMAGE:${{ steps.git_commit_hash.outputs.hash }}
         docker push $FLIGHT_BOOKING_IMAGE:latest
 
   setup-build-publish-deploy:
@@ -126,4 +125,4 @@ jobs:
         # kubectl delete -A ValidatingWebhookConfiguration my-release-ingress-nginx-admission
         # Apply all yaml files
         kubectl apply -f .
-        kubectl set image flight-booking-deployment book-flight=$FLIGHT_BOOKING_IMAGE:${{ env.SHA }}
+        kubectl set image flight-booking-deployment book-flight=$FLIGHT_BOOKING_IMAGE:${{ needs.docker-image-push_job.outputs.hash }}
