@@ -29,6 +29,13 @@ export class BookingService {
   }
 
   public async book(userInfo, bookingDto: BookingDto) {
+    const currentDate = new Date();
+    if (
+      new Date(bookingDto.check_in_date) < currentDate ||
+      new Date(bookingDto.check_out_date) < currentDate
+    ) {
+      return 'The entered date is in the past.';
+    }
     const roomData = await this.checkRoom(bookingDto.room_id);
     if (!roomData) {
       return 'Invalid room id';
