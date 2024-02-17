@@ -14,7 +14,7 @@ export class BookingController {
   }
 
   @Post('/payment')
-  async bookingPayment(@Body() id: { booking_id: number }) {
-    return await this.bookingService.payment(id);
+  async bookingPayment(@Request() request, @Body() id: { booking_id: number }) {
+    return await this.bookingService.payment(id, request['user']);
   }
 }

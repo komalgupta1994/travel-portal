@@ -1,5 +1,6 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { AmqpConnection } from '@nestjs-plus/rabbitmq';
 import { Repository } from 'typeorm';
 import { Room } from './entities/room.entity';
 import { User } from 'src/user/entities/user.entity';
@@ -21,6 +22,7 @@ export class BookingService {
     @InjectRepository(Payment)
     private readonly paymentRepository: Repository<Payment>,
     private readonly redisService: RedisService,
+    private readonly amqpConnection: AmqpConnection
   ) {
     this.redisService.redisExpiredFunction().subscribe((bookingId) => {
       console.log('delete key from redis', bookingId);
@@ -81,7 +83,7 @@ export class BookingService {
     }
   }
 
-  public async payment(bookingId: { booking_id: number }) {
+  public async payment(bookingId: { booking_id: number }, userInfo) {
     const bookId = bookingId.booking_id;
     const payment = new Payment();
     payment.booking_id = bookId;
@@ -98,6 +100,7 @@ export class BookingService {
           status: 'Completed',
         });
         await this.redisService.deleteKey(`booking:${bookId}`);
+        await this.amqpConnection.publish('notification_exchange', 'notification_routing_key', {userInfo});
         return 'Payment Successful';
       })
       .catch((err) => {

@@ -49,6 +49,11 @@ spec:
                 configMapKeyRef:
                   name: db-config-map
                   key: HOTEL_DB
+            - name: RabbitMQ_Host
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config-map
+                  key: RabbitMQ_Host
             - name: MYSQL_PASSWORD
               valueFrom:
                 secretKeyRef:
@@ -59,3 +64,13 @@ spec:
                 secretKeyRef:
                   name: jwt-secret-key
                   key: JWT_SECRET_KEY
+            - name: RabbitMQ_Username
+              valueFrom:
+                secretKeyRef:
+                  name: rabbitmq-user-secret
+                  key: rabbitmq_username
+            - name: RabbitMQ_Password
+              valueFrom:
+                secretKeyRef:
+                  name: rabbitmq-password-secret
+                  key: rabbitmq_password

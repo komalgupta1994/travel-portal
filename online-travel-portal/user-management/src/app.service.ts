@@ -7,6 +7,7 @@ import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
 import { InjectMetric } from '@willsoto/nestjs-prometheus';
 import { Counter } from 'prom-client';
+import { RabbitSubscribe } from '@nestjs-plus/rabbitmq';
 
 @Injectable()
 export class AppService {
@@ -60,5 +61,14 @@ export class AppService {
     } catch {
       throw new UnauthorizedException('Incorrect email id or password');
     }
+  }
+
+  @RabbitSubscribe({
+    exchange: 'notification_exchange',
+    routingKey: 'notification_routing_key',
+    queue: 'notification_queue_name'
+  })
+  public async handlePaymentCompletion(data) {
+    console.log('message from user management svc', data)
   }
 }

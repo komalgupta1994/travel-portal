@@ -10,13 +10,16 @@ import { Room } from './entities/room.entity';
 import { UserModule } from '../user/user.module';
 import { RedisService } from './redis/redis.service';
 import { JwtService } from '@nestjs/jwt';
+import { RabbitMQModule } from '@nestjs-plus/rabbitmq';
+import { rabbitMQConfig } from './config/rabbitMQ.config';
 
 @Module({
   imports: [
     TypeOrmModule.forFeature([Hotel, Room, Booking, Payment, User]),
+    RabbitMQModule.forRoot(rabbitMQConfig),
     UserModule,
   ],
   controllers: [BookingController],
-  providers: [BookingService, RedisService, JwtService]
+  providers: [BookingService, RedisService, JwtService],
 })
 export class BookingModule {}

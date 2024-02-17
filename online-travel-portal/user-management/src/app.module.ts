@@ -11,9 +11,12 @@ import {
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { UserResolver } from './app.resolver';
+import { RabbitMQModule } from '@nestjs-plus/rabbitmq';
+import { rabbitMQConfig } from './config/rabbitmq.config';
 
 @Module({
   imports: [
+    RabbitMQModule.forRoot(rabbitMQConfig),
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: process.env.MYSQL_HOST || 'localhost',

@@ -8,6 +8,7 @@ data:
   MYSQL_USERNAME: "komal"
   HOTEL_DB: "hotel_management"
   USER_DB: "user_management"
+  RabbitMQ_Host: "rabbitmq-service"
 # command to create secret on and we need to setup manually on every env where we want to run out code like local, prod etc
 # "kubectl create secret generic mysql-password-secret --from-literal MYSQL_PASSWORD=<password>"
 # kubectl create secret generic jwt-secret-key --from-literal JWT_SECRET_KEY=""
